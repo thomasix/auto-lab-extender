@@ -49,7 +49,7 @@ print(driver.title)
 # Wait for 30 seconds
 driver.implicitly_wait(30)
 # switch to the iframe
-driver.switch_to.frame(driver.find_element("tag", "iframe"))
+driver.switch_to.frame(driver.find_element("id", "tool_content"))
 print(driver.title)
 #click launchclabsbtn button 
 driver.find_element("id", 'launchclabsbtn').click()
