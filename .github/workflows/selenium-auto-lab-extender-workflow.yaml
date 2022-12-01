@@ -6,11 +6,11 @@ on:
       - master
   schedule:
     - cron: '0 0 * * *'
-    - cron: '30 3 * * *'
-    - cron: '0 7 * * *'
-    - cron: '30 10 * * *'
-    - cron: '0 14 * * *'
-    - cron: '30 17 * * *'
+    - cron: '0 6 * * *'
+    - cron: '0 9 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 15 * * *'
+    - cron: '0 18 * * *'
     - cron: '0 21 * * *'
 jobs:
   scrape:
