@@ -39,9 +39,9 @@ driver = webdriver.Chrome(options = chrome_options)
 
 driver.get('https://awsacademy.instructure.com/login/canvas')
 print(driver.title)
-driver.find_element_by_id('pseudonym_session_unique_id').send_keys(username)
-driver.find_element_by_id('pseudonym_session_password').send_keys(password)
-driver.find_element_by_id('login_form').submit()
+driver.find_element("id", 'pseudonym_session_unique_id').send_keys(username)
+driver.find_element("id", 'pseudonym_session_password').send_keys(password)
+driver.find_element("id", 'login_form').submit()
 print(driver.title)
 
 driver.get('https://awsacademy.instructure.com/courses/29938/modules/items/2500913')
@@ -49,10 +49,10 @@ print(driver.title)
 # Wait for 30 seconds
 driver.implicitly_wait(30)
 # switch to the iframe
-driver.switch_to.frame(driver.find_element_by_tag_name("iframe"))
+driver.switch_to.frame(driver.find_element("tag", "iframe"))
 print(driver.title)
-#click launch lab button 
-driver.find_element_by_id('launchclabsbtn').click()
+#click launchclabsbtn button 
+driver.find_element("id", 'launchclabsbtn').click()
 
 # Wait for 30 seconds
 driver.implicitly_wait(30)
