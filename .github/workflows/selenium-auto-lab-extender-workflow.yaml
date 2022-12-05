@@ -46,7 +46,7 @@ jobs:
 
       - name: Upload credentials
         run: |
-          input=credentials
+          input=.aws/credentials
 
           while IFS= read -r line
           do
