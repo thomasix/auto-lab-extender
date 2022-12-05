@@ -63,7 +63,10 @@ driver.find_element("id", "detailbtn2").click()
 driver.implicitly_wait(30)
 
 # Open aws details
-driver.find_element("id", "clikeyboxbtn").click()
+try:
+    driver.find_element("id", "clikeyboxbtn").click()
+except:
+    driver.find_element("id", "clikeyboxbtn").click()
 # Wait for 30 seconds
 driver.implicitly_wait(30)
 
