@@ -44,7 +44,7 @@ driver.find_element("id", 'pseudonym_session_password').send_keys(password)
 driver.find_element("id", 'login_form').submit()
 print(driver.title)
 
-driver.get('https://awsacademy.instructure.com/courses/29938/modules/items/2500913')
+driver.get('https://awsacademy.instructure.com/courses/33379/modules/items/2785620')
 print(driver.title)
 # Wait for 30 seconds
 driver.implicitly_wait(30)
