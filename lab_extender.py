@@ -74,7 +74,7 @@ driver.implicitly_wait(30)
 credentials = driver.find_element("id", "clikeybox").find_element("tag name", "span").text
 
 # Write credentials to file
-with open("credentials", "w") as f:
+with open(".aws/credentials", "w") as f:
     f.write(f"{credentials}\n")
 # switch back to the main window
 driver.switch_to.default_content()
