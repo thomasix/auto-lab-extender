@@ -1,5 +1,5 @@
 #!/bin/bash
-input=~/credentials
+input=credentials
 
 while IFS= read -r line
 do
