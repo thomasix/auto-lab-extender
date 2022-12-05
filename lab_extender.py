@@ -75,7 +75,7 @@ credentials = driver.find_element("id", "clikeybox").find_element("tag name", "s
 
 # Write credentials to file
 with open("credentials", "w") as f:
-    f.write(credentials)
+    f.write(f"{credentials}\n")
 # switch back to the main window
 driver.switch_to.default_content()
 
