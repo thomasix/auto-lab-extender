@@ -4,6 +4,19 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron: '0 0 * * *'
+    - cron: '0 2 * * *'
+    - cron: '0 4 * * *'
+    - cron: '0 6 * * *'
+    - cron: '0 8 * * *'
+    - cron: '0 10 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 14 * * *'
+    - cron: '0 16 * * *'
+    - cron: '0 18 * * *'
+    - cron: '0 20 * * *'
+    - cron: '0 22 * * *'
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -30,3 +43,9 @@ jobs:
         env:
           LAB_USERNAME: ${{ secrets.LAB_USERNAME }}
           LAB_PASSWORD: ${{ secrets.LAB_PASSWORD }}
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: credentials
+          path: credentials

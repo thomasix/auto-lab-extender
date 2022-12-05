@@ -59,6 +59,23 @@ driver.implicitly_wait(30)
 # switch back to the main window
 driver.switch_to.default_content()
 
+# Open aws details
+driver.find_element("id", "detailbtn2").click()
+# Wait for 30 seconds
+driver.implicitly_wait(30)
+
+# Open aws details
+driver.find_element("id", "clikeyboxbtn").click()
+# Wait for 30 seconds
+driver.implicitly_wait(30)
+
+# get text from text area
+credentials = driver.find_element("id", "clikeybox").find_element("tag name", "span").text
+
+# Write credentials to file
+with open("credentials", "w") as f:
+    f.write(credentials)
+
 # Exit
 driver.quit()
 
