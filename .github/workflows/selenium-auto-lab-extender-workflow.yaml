@@ -45,7 +45,7 @@ jobs:
           LAB_PASSWORD: ${{ secrets.LAB_PASSWORD }}
 
       - name: Upload credentials
-        run: ./upload-secrets.sh
+        run: chmod +x ./upload-secrets.sh && ./upload-secrets.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
