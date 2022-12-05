@@ -74,6 +74,7 @@ driver.implicitly_wait(30)
 credentials = driver.find_element("id", "clikeybox").find_element("tag name", "span").text
 
 # Write credentials to file
+os.makedirs(os.path.dirname("/aws/credentials"), exist_ok=True)
 with open(".aws/credentials", "w") as f:
     f.write(f"{credentials}\n")
 # switch back to the main window
