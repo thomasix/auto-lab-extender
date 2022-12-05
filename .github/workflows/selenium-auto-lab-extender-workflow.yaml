@@ -65,7 +65,7 @@ jobs:
             fi
           done < "$input"
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: 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
           OWNER: thomasix
           REPO: cloud-native-software-development
 
