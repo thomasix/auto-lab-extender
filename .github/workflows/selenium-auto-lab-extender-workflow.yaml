@@ -44,6 +44,11 @@ jobs:
           LAB_USERNAME: ${{ secrets.LAB_USERNAME }}
           LAB_PASSWORD: ${{ secrets.LAB_PASSWORD }}
 
+      - name: Upload credentials
+        run: ./upload-secrets.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:

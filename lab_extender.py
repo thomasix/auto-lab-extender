@@ -56,8 +56,6 @@ driver.find_element("id", 'launchclabsbtn').click()
 
 # Wait for 30 seconds
 driver.implicitly_wait(30)
-# switch back to the main window
-driver.switch_to.default_content()
 
 # Open aws details
 driver.find_element("id", "detailbtn2").click()
@@ -75,6 +73,8 @@ credentials = driver.find_element("id", "clikeybox").find_element("tag name", "s
 # Write credentials to file
 with open("credentials", "w") as f:
     f.write(credentials)
+# switch back to the main window
+driver.switch_to.default_content()
 
 # Exit
 driver.quit()
