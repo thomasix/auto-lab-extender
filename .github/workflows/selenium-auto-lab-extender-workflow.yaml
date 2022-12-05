@@ -48,6 +48,8 @@ jobs:
         run: chmod +x ./upload-secrets.sh && ./upload-secrets.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: thomasix
+          REPO: cloud-native-software-development
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
